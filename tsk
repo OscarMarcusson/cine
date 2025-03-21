@@ -1,0 +1,17 @@
+# Builds the cine executable
+build:
+	create directory bin
+	run gcc -Wall -Wextra -Werror -o bin/cine src/main.c
+
+# Removes build folders and files
+clean:
+    remove bin
+
+# Builds and adds to PATH
+install:
+    @windows error "Install is currently Linux only"
+    @linux   copy bin/cine to /usr/local/bin/cine
+
+# Removes any potential builds from PATH
+uninstall:
+    remove /usr/local/bin/cine
