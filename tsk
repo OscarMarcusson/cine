@@ -1,6 +1,11 @@
 # Builds the cine executable
 build:
 	create directory bin
+	run gcc -Wall -Wextra -o bin/cine src/main.c
+
+# Builds a release build of cine
+build-r:
+	create directory bin
 	run gcc -Wall -Wextra -Werror -o bin/cine src/main.c
 
 # Removes build folders and files
